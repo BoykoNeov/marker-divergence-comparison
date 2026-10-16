@@ -1,0 +1,18 @@
+{
+  "names": ["18S", "28S"],
+  "titles": ["18S rRNA", "28S rRNA"],
+  "species_parts": 2,
+  "subgenus_genera": ["Plagiorhynchus"],
+  "window": 15,
+  "position_max": 600,
+  "scatter_max": 0.33,
+  "zoom": 0.05,
+  "out_name": "Fig_18S_vs_28S_divergence",
+  "labels": [
+    {"species": ["Centrorhynchus_buteonis", "Centrorhynchus_microcephalus"], "text_at": [-0.0006, 0.0205], "line_from": [0.03, 0]},
+    {"species": ["Polymorphus_minutus", "Polymorphus_obtusus"], "text_at": [0.025, 0.0050]},
+    {"species": ["Southwellina_hispida"], "text_at": [0.025, 0.0013]},
+    {"species": ["Pseudocorynosoma_anatarium", "Pseudocorynosoma_tepehuanesi"], "text_at": [0.025, 0.0088]},
+    {"species": ["Profilicollis_altmani", "Profilicollis_bullocki"], "text_at": [0.025, 0.0126]}
+  ]
+}
