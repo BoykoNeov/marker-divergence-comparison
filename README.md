@@ -32,7 +32,8 @@ DNA markers whose sequence names follow the rule described below.
    - A pair of sequences with no position in common that can be compared is
      reported and left out.
 5. **Assigns each comparison to a level:** same species, same genus, or
-   different genera.
+   different genera. The figure key calls these "intraspecific, within
+   species", "interspecific within genus" and "interspecific between genera".
 6. **Measures variability along each alignment**, using one sequence per
    species: the first one listed in the file. At each position, variability is
    one minus the frequency of the most common base. It is smoothed with a
@@ -55,7 +56,7 @@ are separated by `_` or spaces.
 - `--subgenus-genera GENUS ...` handles genera whose headers include a subgenus:
   `>Genus_Subgenus_species_...`. For these genera the species is read from one
   more part, and the subgenus, not the genus, counts as the genus-level unit.
-  Comparisons between subgenera are then grouped with "different
+  Comparisons between subgenera are then grouped with "interspecific between
   genera/subgenera".
 
 ## The figure

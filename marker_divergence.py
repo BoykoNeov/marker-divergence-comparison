@@ -235,7 +235,7 @@ def draw(pts, prof, cfg, level_names, out_dir):
     handles = [Line2D([], [], marker='o', ls='', color=COLOURS[l], markeredgecolor='white', markersize=6,
                       label=f'{level_names[l]} (n = {n[l]})') for l in reversed(DRAW_ORDER) if n[l]]
     fig.legend(handles=handles, loc='lower center', ncol=3, frameon=False, fontsize=7.5, handletextpad=0.3,
-               bbox_to_anchor=(0.5, 0.0), columnspacing=1.5)
+               bbox_to_anchor=(0.5, 0.0), columnspacing=1.0)
 
     labels = {tuple(sorted(lab['species'])): lab for lab in cfg['labels']}
     found = set()
@@ -315,8 +315,9 @@ def main(argv=None):
     cfg = settings(args)
 
     naming = Naming(cfg['species_parts'], cfg['subgenus_genera'])
-    level_names = {SPECIES: 'Same species', GENUS: 'Same genus',
-                   BETWEEN: 'Different genera/subgenera' if cfg['subgenus_genera'] else 'Different genera'}
+    level_names = {SPECIES: 'Intraspecific, within species', GENUS: 'Interspecific within genus',
+                   BETWEEN: 'Interspecific between genera/subgenera' if cfg['subgenus_genera']
+                   else 'Interspecific between genera'}
     s1, s2 = read_fasta(args.aln1), read_fasta(args.aln2)
     sp1, sp2 = by_species(s1, naming), by_species(s2, naming)
     shared = sorted(set(sp1) & set(sp2))
